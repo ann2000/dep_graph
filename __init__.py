@@ -1,1 +1,1 @@
-from .main import dependency_graph
+from .dep_graph import dependency_graph
