@@ -1,7 +1,5 @@
 __pycache__/
 *.py[cod]
 build/
-.github/workflows/
-output.txt
 *.egg-info/
-*.egg
+.github/workflows
