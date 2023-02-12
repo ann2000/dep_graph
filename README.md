@@ -2,7 +2,7 @@
 This package can be used to read a JSON file from a fixed filesystem location containing a list of packages and their dependencies, and reconstructs the full dependency graph.
 
 ## Installation
-Clone the repository and run the following command in the root:
+Clone the repository and run the following command in the root:<br />
 `pip install .`
 
 This will install the dep_graph module along with the dependencies.
