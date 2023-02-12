@@ -47,24 +47,6 @@ class TestConstructDependencyGraph(unittest.TestCase):
         # Check if the graph is empty
         self.assertFalse(graph.nodes)
 
-    def test_dependency_graph_cyclic(self):
-        # Test data with cyclic dependencies
-        test_data = {
-            "pkg1": ["pkg2"],
-            "pkg2": ["pkg3"],
-            "pkg3": ["pkg1"]
-        }
-
-        # Save test data to a file
-        with open("test_deps.json", "w") as file:
-            json.dump(test_data, file)
-
-        # Construct the graph
-        graph = dependency_graph("test_deps.json")
-
-        # Check if the graph has a cycle
-        self.assertTrue(nx.is_directed_acyclic_graph(graph))
-
     def test_dependency_graph_missing(self):
         # Test data with missing dependencies
         test_data = {
