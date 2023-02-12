@@ -21,8 +21,8 @@ jobs:
     - name: Install dependencies
       run: pip install networkx matplotlib
 
-    - name: Test program
-      run: python dep_graph.py
+    - name: Run code
+      run: python dep_graph.py > output.txt
 
     - name: Verify output
       run: cat output.txt
