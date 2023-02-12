@@ -48,6 +48,8 @@ def traverse_graph(graph: nx.DiGraph, pkg: str, level: int):
     level: int 
            The level of indentation for printing
     """
+    with open("output.txt", "a") as f:
+        f.write("  " * level + pkg + "\n")
 
     print("  " * level + pkg)
     for item in graph[pkg]:
