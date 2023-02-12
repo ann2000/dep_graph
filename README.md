@@ -20,6 +20,8 @@ The json file is stored at `tmp/deps.json` and structured as:
     ...
 }
 
+The output dependency graph structure will be displayed on stdout. A directional graph plot will also be displayed using matplotlib.
+
 ## Testing
 The unit tests for the dependency_graph function is written in test_dependency_graph.py in the tests folder.
 To run the tests, navigate to tests directory using the command `cd tests` followed by:<br />
