@@ -7,7 +7,7 @@ import sys
 # Add parent directory to system path
 sys.path.insert(0, '..')
 
-from dep_graph1 import dependency_graph
+from dep_graph import dependency_graph
 
 class TestConstructDependencyGraph(unittest.TestCase):
     def test_dependency_graph(self):
