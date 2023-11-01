@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: pip install networkx matplotlib
+
+    - name: Run code
+      run: python dep_graph.py > output.txt
+
+    - name: Verify output
+      run: cat output.txt
+      if: success()
+      id: output
